@@ -36,6 +36,12 @@ int main(int argc, char *argv[])
     // 单位向量u
     cout << "va的单位向量U=\n" << va.normalized() << endl;
     // 任何向量都可以表示为V = |V|U
+
+
+
+
+
+    
     cout << "|V|U = \n" << va.norm() * va.normalized() << endl;
 
     // 点积
