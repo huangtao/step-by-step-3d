@@ -20,9 +20,9 @@
 #include "OgreHlmsManager.h"
 #include "OgreHlmsPbs.h"
 
-using namespace Demo;
+using namespace Xyz;
 
-namespace Demo
+namespace Xyz
 {
     EmptyProjectGameState::EmptyProjectGameState(const Ogre::String &helpDescription) :
         TutorialGameState(helpDescription),

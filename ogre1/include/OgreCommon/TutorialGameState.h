@@ -1,6 +1,6 @@
 
-#ifndef _Demo_TutorialGameState_H_
-#define _Demo_TutorialGameState_H_
+#ifndef _Xyz_TutorialGameState_H_
+#define _Xyz_TutorialGameState_H_
 
 #include "OgrePrerequisites.h"
 #include "GameState.h"
@@ -13,7 +13,7 @@ namespace Ogre
     }
 }
 
-namespace Demo
+namespace Xyz
 {
     class GraphicsSystem;
     class CameraController;

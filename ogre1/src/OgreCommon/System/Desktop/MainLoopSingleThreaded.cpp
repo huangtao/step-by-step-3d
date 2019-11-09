@@ -41,13 +41,13 @@ THE SOFTWARE.
 
 #include "Threading/OgreThreads.h"
 
-using namespace Demo;
+using namespace Xyz;
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
-INT WINAPI Demo::MainEntryPoints::mainAppSingleThreaded( HINSTANCE hInst, HINSTANCE hPrevInstance,
+INT WINAPI Xyz::MainEntryPoints::mainAppSingleThreaded( HINSTANCE hInst, HINSTANCE hPrevInstance,
                                                          LPSTR strCmdLine, INT nCmdShow )
 #else
-int Demo::MainEntryPoints::mainAppSingleThreaded( int argc, const char *argv[] )
+int Xyz::MainEntryPoints::mainAppSingleThreaded( int argc, const char *argv[] )
 #endif
 {
     GameState *graphicsGameState = 0;

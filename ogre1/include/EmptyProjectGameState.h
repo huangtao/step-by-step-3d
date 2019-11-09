@@ -1,11 +1,11 @@
 
-#ifndef _Demo_EmptyProjectGameState_H_
-#define _Demo_EmptyProjectGameState_H_
+#ifndef _Xyz_EmptyProjectGameState_H_
+#define _Xyz_EmptyProjectGameState_H_
 
 #include "OgrePrerequisites.h"
 #include "TutorialGameState.h"
 
-namespace Demo
+namespace Xyz
 {
 	class EmptyProjectGameState : public TutorialGameState
     {

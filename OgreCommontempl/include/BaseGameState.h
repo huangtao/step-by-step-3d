@@ -1,0 +1,57 @@
+
+#ifndef _Xyz_TutorialGameState_H_
+#define _Xyz_TutorialGameState_H_
+
+#include "OgrePrerequisites.h"
+#include "GameState.h"
+
+namespace Ogre
+{
+    namespace v1
+    {
+        class TextAreaOverlayElement;
+    }
+}
+
+namespace Xyz
+{
+    class GraphicsSystem;
+    class CameraController;
+
+    /// Base game state for the tutorials. All it does is show a little text on screen :)
+    class BaseGameState : public GameState
+    {
+    protected:
+        GraphicsSystem      *mGraphicsSystem;
+
+        /// Optional, for controlling the camera with WASD and the mouse
+        CameraController    *mCameraController;
+
+        Ogre::String        mHelpDescription;
+        Ogre::uint16        mDisplayHelpMode;
+        Ogre::uint16        mNumDisplayHelpModes;
+
+        Ogre::v1::TextAreaOverlayElement *mDebugText;
+        Ogre::v1::TextAreaOverlayElement *mDebugTextShadow;
+
+        virtual void createDebugTextOverlay(void);
+        virtual void generateDebugText( float timeSinceLast, Ogre::String &outText );
+
+    public:
+        BaseGameState( const Ogre::String &helpDescription );
+        virtual ~BaseGameState();
+
+        void _notifyGraphicsSystem( GraphicsSystem *graphicsSystem );
+
+        virtual void createScene01(void);
+
+        virtual void update( float timeSinceLast );
+
+        virtual void keyPressed( const SDL_KeyboardEvent &arg );
+        virtual void keyReleased( const SDL_KeyboardEvent &arg );
+
+        virtual void mouseMoved( const SDL_Event &arg );
+    };
+}
+
+#endif

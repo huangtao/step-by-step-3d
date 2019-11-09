@@ -1,6 +1,8 @@
 
 #include "GraphicsSystem.h"
 #include "EmptyProjectGameState.h"
+#include "LogicSystem.h"
+#include "LogicGameState.h"
 
 #include "OgreSceneManager.h"
 #include "OgreCamera.h"
@@ -32,10 +34,11 @@ INT WINAPI WinMainApp( HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR strCmdLin
 int mainApp( int argc, const char *argv[] )
 #endif
 {
-    return Demo::MainEntryPoints::mainAppSingleThreaded( DEMO_MAIN_ENTRY_PARAMS );
+    // 使用多线程应用模式
+    return Xyz::MainEntryPoints::mainAppMultiThreaded( MAIN_FUNC_ENTRY_PARAMS );
 }
 
-namespace Demo
+namespace Xyz
 {
     class EmptyProjectGraphicsSystem : public GraphicsSystem
     {
@@ -173,6 +176,8 @@ namespace Demo
 
         *outGraphicsGameState = gfxGameState;
         *outGraphicsSystem = graphicsSystem;
+
+        LogicSystem *logicSystem = new LogicSystem();
     }
 
     void MainEntryPoints::destroySystems( GameState *graphicsGameState,

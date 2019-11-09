@@ -18,9 +18,9 @@
 #include "OgreHlmsCompute.h"
 #include "OgreGpuProgramManager.h"
 
-using namespace Demo;
+using namespace Xyz;
 
-namespace Demo
+namespace Xyz
 {
     TutorialGameState::TutorialGameState( const Ogre::String &helpDescription ) :
         mGraphicsSystem( 0 ),
@@ -104,9 +104,6 @@ namespace Demo
         finalText += "\n\nPress F1 to toggle help";
 
         outText.swap( finalText );
-
-        mDebugText->setCaption( finalText );
-        mDebugTextShadow->setCaption( finalText );
     }
     //-----------------------------------------------------------------------------------
     void TutorialGameState::update( float timeSinceLast )

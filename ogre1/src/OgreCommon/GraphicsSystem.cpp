@@ -48,7 +48,7 @@
     #endif
 #endif
 
-namespace Demo
+namespace Xyz
 {
     GraphicsSystem::GraphicsSystem( GameState *gameState,
                                     Ogre::ColourValue backgroundColour ) :
@@ -801,7 +801,7 @@ namespace Demo
     {
         Ogre::CompositorManager2 *compositorManager = mRoot->getCompositorManager2();
 
-        const Ogre::String workspaceName( "Demo Workspace" );
+        const Ogre::String workspaceName( "Xyz Workspace" );
         if( !compositorManager->hasWorkspaceDefinition( workspaceName ) )
         {
             compositorManager->createBasicWorkspaceDef( workspaceName, mBackgroundColour,

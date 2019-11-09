@@ -1,11 +1,11 @@
 
-#ifndef _Demo_CameraController_H_
-#define _Demo_CameraController_H_
+#ifndef _Xyz_CameraController_H_
+#define _Xyz_CameraController_H_
 
 #include "OgrePrerequisites.h"
 #include "TutorialGameState.h"
 
-namespace Demo
+namespace Xyz
 {
     class CameraController
     {
